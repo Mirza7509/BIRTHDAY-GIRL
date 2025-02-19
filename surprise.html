@@ -65,6 +65,20 @@
         a:hover {
             background-color: #cc0000;
         }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
     </style>
 </head>
 <body>
@@ -85,10 +99,12 @@
             Your browser does not support the video tag.
         </video>
         
-        <audio id="birthday-song" autoplay>
+        <audio id="birthday-song">
             <source src="happy-birthday-song.mp3" type="audio/mpeg">
             Your browser does not support the audio tag.
         </audio>
+
+        <button onclick="playSong()">🎵 Play Birthday Song</button>
         
         <div class="birthday-wishes">
             <h2>Happy Birthday, My Love! 🎉</h2>
@@ -98,5 +114,12 @@
         <p>I love you forever! 💖</p>
         <a href="loveTresureHunt.html">Back to Start</a>
     </div>
+
+    <script>
+        function playSong() {
+            let audio = document.getElementById('birthday-song');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
