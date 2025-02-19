@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Treasure Hunt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        h1, h2 {
+            color: #ff4d4d;
+        }
+        p {
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        .hidden {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff4d4d;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Love Treasure Hunt ❤️</h1>
+        <p>Are you ready for the adventure?</p>
+        <button onclick="startGame()">Start</button>
+    </div>
+    
+    <div class="container hidden" id="puzzle1">
+        <h2>Question 1</h2>
+        <p>Did you still love your girlfriend? YES or NO</p>
+        <input type="text" id="answer1">
+        <button onclick="checkAnswer('answer1', 'yes', 'puzzle2')">Submit</button>
+    </div>
+    
+    <div class="container hidden" id="puzzle2">
+        <h2>Question 2</h2>
+        <p>What is Athirah favorite nickname for you?</p>
+        <input type="text" id="answer2">
+        <button onclick="checkAnswer('answer2', 'baby', 'puzzle3')">Submit</button>
+    </div>
+	
+	<div class="container hidden" id="puzzle3">
+        <h2>Question 3</h2>
+        <p>What is the date of your birthday? (Format: DD/MM/YYYY)?</p>
+        <input type="text" id="answer3">
+        <button onclick="checkAnswer('answer3', '20/02/2005', 'puzzle4')">Submit</button>
+    </div>
+	
+	<div class="container hidden" id="puzzle4">
+        <h2>Question 4</h2>
+        <p>How old are you?</p>
+        <input type="text" id="answer4">
+        <button onclick="checkAnswer('answer4', '20', 'finalPage')">Submit</button>
+    </div>
+    
+    <div class="container hidden" id="finalPage">
+        <h1>Congratulations! 🎉</h1>
+        <p>You’ve completed the treasure hunt!</p>
+        <p>Click below for your surprise:</p>
+        <a href="surprise.html">Your Surprise</a>
+    </div>
+
+    <script>
+        function startGame() {
+            document.querySelector('.container').classList.add('hidden');
+            document.getElementById('puzzle1').classList.remove('hidden');
+        }
+
+        function checkAnswer(inputId, correctAnswer, nextId) {
+            let userAnswer = document.getElementById(inputId).value.toLowerCase();
+            if (userAnswer === correctAnswer) {
+                document.getElementById(inputId).parentNode.classList.add('hidden');
+                document.getElementById(nextId).classList.remove('hidden');
+            } else {
+                alert("Try again!");
+            }
+        }
+    </script>
+</body>
+</html>
