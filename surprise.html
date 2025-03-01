@@ -5,188 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Surprise! ❤️</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
-
-        * {
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            overflow-x: hidden;
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            padding: 10px;
-            overflow-y: auto; /* Allows scrolling */
-            position: relative;
-        }
-
         .container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 5% auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            width: 100%;
-            margin: 20px auto; /* Ensures proper spacing */
-            position: relative;
-            z-index: 1;
         }
-
         h1 {
-            font-family: 'Pacifico', cursive;
             color: #ff4d4d;
-            font-size: 22px;
+            font-size: 1.8rem;
         }
-
-        h2 {
-            color: #d6336c;
-            font-size: 20px;
-        }
-
         p {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 10px;
+            color: #333;
+            font-size: 1rem;
+            padding: 0 10px;
         }
-
         .media-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 5px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 15px;
         }
-
         img {
-            width: 45%;
+            max-width: 30%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
         }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
         video {
             width: 100%;
             border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        .birthday-wishes {
             margin-top: 15px;
-            background-color: #ffcccc;
-            padding: 12px;
-            border-radius: 10px;
         }
-
+        .birthday-wishes {
+            margin-top: 25px;
+            background-color: #ffcccc;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+        }
         a {
             display: inline-block;
-            margin-top: 12px;
+            margin-top: 15px;
             text-decoration: none;
-            background: #ff4d4d;
             color: white;
+            background-color: #ff4d4d;
             padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: 0.3s;
+            border-radius: 5px;
+            font-size: 1rem;
         }
-
         a:hover {
-            background: #d6336c;
-            transform: scale(1.05);
-        }
-
-        /* Floating Hearts */
-        .heart-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .heart {
-            position: absolute;
-            bottom: -10px;
-            width: 15px;
-            height: 15px;
-            background: red;
-            opacity: 0.7;
-            transform: rotate(-45deg);
-            animation: floatUp 4s infinite ease-in-out;
-        }
-
-        .heart:before,
-        .heart:after {
-            content: '';
-            width: 15px;
-            height: 15px;
-            background: red;
-            position: absolute;
-            border-radius: 50%;
-        }
-
-        .heart:before {
-            top: -8px;
-            left: 0;
-        }
-
-        .heart:after {
-            left: 8px;
-            top: 0;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(-45deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(-45deg);
-                opacity: 0;
-            }
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            .container {
-                width: 100%;
-                padding: 12px;
-            }
-
-            img {
-                width: 48%;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            a {
-                font-size: 14px;
-                padding: 8px 12px;
-            }
+            background-color: #cc0000;
         }
     </style>
 </head>
 <body>
-    <div class="heart-container"></div> <!-- Floating Hearts -->
-
     <div class="container">
         <h1>Congratulations, My Love! ❤️</h1>
         <p>You’ve completed the treasure hunt, and here is your surprise!</p>
@@ -204,32 +87,46 @@
             Your browser does not support the video tag.
         </video>
         
-        <audio id="birthday-song" autoplay>
-            <source src="happy-birthday-song.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-        
         <div class="birthday-wishes">
             <h2>Happy Birthday, My Love! 🎉</h2>
-            <p>On this special day, I just want to remind you how much you mean to me. You are the most amazing person in my life, and I feel so lucky to have you. May this year bring you happiness, love, and all your dreams come true! ❤️</p>
+            <p>My dearest, today is a day as special as you are. From the moment you walked into my life, you brought warmth, love, and endless joy. You are the reason I wake up smiling, the person who makes every moment magical, and the one who fills my heart with love beyond words.</p>
+
+            <p>Every second spent with you is a gift. You are my safe haven, my greatest adventure, and my sweetest love story. I cherish your laugh, your kindness, your strength, and the way you love so purely. You are my heart’s greatest treasure.</p>
+
+            <p>On this beautiful day, I wish you boundless happiness, laughter that never fades, and dreams that come true. May this year be filled with love, success, and all the wonderful things your heart desires. No matter what happens, know that I will always be by your side, cheering for you, supporting you, and loving you endlessly. </p>
+
+            <p>Thank you for being you. Thank you for making my world so much brighter. Thank you for letting me love you.</p>
+
+            <p>Happy birthday, my love. I love you forever and always! ❤️</p>
         </div>
-        
+
         <p>I love you forever! 💖</p>
         <a href="loveTresureHunt.html">Back to Start</a>
     </div>
 
+    <!-- 🎵 Auto-playing Birthday Song -->
+    <audio id="birthday-song" autoplay>
+        <source src="happy-birthday-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
     <script>
-        function createHearts() {
-            for (let i = 0; i < 15; i++) {
-                let heart = document.createElement('div');
-                heart.classList.add('heart');
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-                document.querySelector('.heart-container').appendChild(heart);
-                setTimeout(() => heart.remove(), 4000);
+        // Ensure the birthday song plays automatically
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("birthday-song");
+
+            // Try playing immediately (some browsers allow autoplay with sound)
+            let playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // If autoplay is blocked, wait for user interaction
+                    document.body.addEventListener("click", () => {
+                        audio.play();
+                    }, { once: true });
+                });
             }
-        }
-        setInterval(createHearts, 600);
+        });
     </script>
 </body>
 </html>
